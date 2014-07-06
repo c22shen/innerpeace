@@ -1,0 +1,19 @@
+---
+development:
+  cloud_name: dod2fovtd
+  api_key: '338951573886241'
+  api_secret: W1zc5w06124v_coJxhP8k6ZYLLM
+  enhance_image_tag: true
+  static_image_support: false
+production:
+  cloud_name: dod2fovtd
+  api_key: '338951573886241'
+  api_secret: W1zc5w06124v_coJxhP8k6ZYLLM
+  enhance_image_tag: true
+  static_image_support: true
+test:
+  cloud_name: dod2fovtd
+  api_key: '338951573886241'
+  api_secret: W1zc5w06124v_coJxhP8k6ZYLLM
+  enhance_image_tag: true
+  static_image_support: false

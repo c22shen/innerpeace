@@ -1,0 +1,91 @@
+<div class="fluid-container">
+<div class="row">
+  <div class="col-sm-4 col-sm-offset-4 text-center" style="background: black">
+    <h3 class="text-center" style="font-family: grux"><%=Date.today.strftime("%Y-%m-%d") %> 30 DAY CHALLENGE</h3>
+  </div>
+  </div>
+  
+  <div class="row">
+    <div class="col-xs-4">
+      <h1 class="text-center" style="padding-top:40px;font-family: tua; font-size:8em">XIAO SHEN</h1>
+    </div>
+    <div class="col-xs-4" style="background:black" >
+      <div class="score" style="background: red; color: white; border-radius: 25px">
+        <p class="text-center" style="font-size:8em; font-family: figa">
+            30
+        </h1>
+      </div>
+    </div>
+    <div class="col-xs-4">
+     
+      <h1 class="text-center" style="padding-top:40px;font-family: tua; font-size:8em">
+        <!-- <i class="fa fa-chevron-left"></i> -->
+        HENRY LIU
+        <!-- <i class="fa fa-chevron-right"></i></h1> -->
+    </div>
+  </div>
+
+
+
+  <div class="row">
+    <div class="col-xs-4">
+      <div class="row">
+        <div class="col-sm-6 col-sm-offset-3">
+
+          <button style="border:none; background: transparent;" data-toggle="modal" data-target="#myModal">
+                  <%= image_tag "http://res.cloudinary.com/dod2fovtd/image/upload/c_scale,h_300,w_280/v1404633883/shen_njtq1f.jpg", :style => "width: 100%; display:block; margin: 0 auto;" %>
+          </button>
+          <!-- Modal -->
+          <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-sm">
+              <div class="modal-content">
+                <%= image_tag "http://res.cloudinary.com/dod2fovtd/image/upload/v1404629575/xiao_urvva0.jpg", :style=>"width:100%" %>
+                <button type="button" class="btn btn-success btn-block btn-lg" data-dismiss="modal">
+                  
+                  <i class="fa fa-thumbs-up"></i>
+                  +1 COO
+                </button>
+                <button type="button" class="btn btn-danger btn-block btn-lg" data-dismiss="modal">
+                  <i class="fa fa-bomb"></i>
+                  失败
+                </button>
+              </div>
+            </div>      
+          </div>
+        </div>
+      </div>
+    </div>
+<!-- Button trigger modal -->
+
+
+
+    <div class="col-xs-4" style="background: black"></div>
+        <div class="col-xs-4">
+      <div class="row">
+        <div class="col-sm-6 col-sm-offset-3">
+
+          <button style="border:none; background: transparent;" data-toggle="modal" data-target="#hModal">
+                  <%= image_tag "http://res.cloudinary.com/dod2fovtd/image/upload/c_scale,h_300/v1404633389/liu_geyejk.jpg", :style => "width: 100%; display:block; margin: 0 auto;" %>
+          </button>
+          <!-- Modal -->
+          <div class="modal fade" id="hModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-sm">
+              <div class="modal-content">
+                <%= image_tag "http://res.cloudinary.com/dod2fovtd/image/upload/v1404629575/henry_ydt0my.jpg", :width => "100%" %>
+                <button type="button" class="btn btn-success btn-block btn-lg" data-dismiss="modal">
+                  <i class="fa fa-thumbs-up"></i>
+                  +1 CPO
+                </button>
+                <button type="button" class="btn btn-danger btn-block btn-lg" data-dismiss="modal">
+                  <i class="fa fa-bomb"></i>
+                  失败
+                </button>
+              </div>
+            </div>      
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+</div>

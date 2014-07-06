@@ -1,0 +1,31 @@
+@font-face {
+  font-family: 'grux';
+  src:url('grux.eot');
+  src:url('grux.eot?#iefix') format('embedded-opentype'),
+    url('grux.svg#grux') format('svg'),
+    url('grux.woff') format('woff'),
+    url('grux.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'figa';
+  src:url('figa.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'sequence';
+  src:url('wg_sequence_font.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'tua';
+  src:url('tua.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
