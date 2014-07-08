@@ -26,3 +26,19 @@ font-size: 20px;
   padding-top:150px;
   padding-bottom: 30px;
 }
+
+.hover-number {
+    font-size:8em;
+    font-family: figa;
+    position: relative; /* Just for presentation (Not required) */
+    transition:height 0.5s; /* Animation time */
+    -webkit-transition:height 0.5s; /* For Safari */
+}
+.hover-number:hover {
+    font-size:15em; /* This is the height on hover */
+}
+
+.number-style{
+font-size:8em;
+    font-family: figa;
+}

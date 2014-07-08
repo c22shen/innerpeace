@@ -1,25 +1,28 @@
+<div class="header" style="display:none">
+  <%= image_tag "http://res.cloudinary.com/dod2fovtd/image/upload/v1404803363/background_uoosro.png", :style=>"width:100%;" %>
+</div>
 <div class="fluid-container">
 <div class="row">
   <div class="col-sm-4 col-sm-offset-4 text-center" style="background: black">
-    <h3 class="text-center" style="font-family: grux"><%=Date.today.strftime("%Y-%m-%d") %> 
-  
+    <h3 class="text-center" style="font-family: grux"><%=Date.today.strftime("%Y-%m-%d") %>
+
      30 DAY CHALLENGE</h3>
   </div>
   </div>
-  
+
   <div class="row black-background" >
     <div class="col-xs-4 white-background">
       <h1 class="text-center" style="padding-top:40px;font-family: tua; font-size:8em">XIAO SHEN</h1>
     </div>
     <div class="col-xs-4 " >
       <div class="score" style="background: red; color: white; border-radius: 25px">
-        <p class="text-center" style="font-size:8em; font-family: figa">
-            <%= 30-(Date.today - Date.civil(2014, 7, 6)).to_i %> 
+        <p class="text-center number-style">
+            <%= 30-(Date.today - Date.civil(2014, 7, 6)).to_i %>
         </h1>
       </div>
     </div>
     <div class="col-xs-4 white-background">
-     
+
       <h1 class="text-center" style="padding-top:40px;font-family: tua; font-size:8em">
         <!-- <i class="fa fa-chevron-left"></i> -->
         HENRY LIU
@@ -46,11 +49,11 @@
                 <%= form_for @status do |f| %>
                   <%= f.hidden_field :user, :value => "xiao" %>
                   <%= f.hidden_field :success, :value => true %>
-                  <%= f.text_area :message,:class=>"flat-textarea", :value => "Record another successful day here..." %> 
+                  <%= f.text_area :message,:class=>"flat-textarea", :value => "Record another successful day here..." %>
                   <%= f.submit "成功！COO", :class=>"btn btn-success btn-block btn-lg"  %>
                 <% end %>
               </div>
-            </div>      
+            </div>
           </div>
         </div>
       </div>
@@ -79,7 +82,7 @@
                   <%= f.submit "成功！CPO", :class=>"btn btn-success btn-block btn-lg"  %>
                 <% end %>
               </div>
-            </div>      
+            </div>
           </div>
         </div>
       </div>
@@ -92,7 +95,7 @@
           <% @xiao_status.each do |status| %>
             <tr>
               <td>
-                <%= status.created_at.strftime("%Y-%m-%d") %> 
+                <%= status.created_at.strftime("%Y-%m-%d") %>
               </td>
               <td>
                 <%= status.message %>
@@ -113,7 +116,7 @@
           <% @henry_status.each do |status| %>
             <tr>
               <td>
-                <%= status.created_at.strftime("%Y-%m-%d") %> 
+                <%= status.created_at.strftime("%Y-%m-%d") %>
               </td>
               <td>
                 <%= status.message %>
