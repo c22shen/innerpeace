@@ -1,132 +1,160 @@
-<div class="header" style="display:none">
-  <%= image_tag "http://res.cloudinary.com/dod2fovtd/image/upload/v1404803363/background_uoosro.png", :style=>"width:100%;" %>
+<div class="jumbotron header"%>
+  <div class="container">
+    <h1 class="text-center" style="font-family: grux; color:white">"Progress is impossible without CHANGE, & those who cannot change their minds cannot change ANYTHING." <br> <small style="color:white">-George Bernard Shaw</small> </h1>
+  </div>
 </div>
-<div class="fluid-container">
-<div class="row">
-  <div class="col-sm-4 col-sm-offset-4 text-center" style="background: black">
-    <h3 class="text-center" style="font-family: grux"><%=Date.today.strftime("%Y-%m-%d") %>
+<div class="container" style="padding-top:50px; padding-bottom:50px">
 
-     30 DAY CHALLENGE</h3>
-  </div>
-  </div>
-
-  <div class="row black-background" >
-    <div class="col-xs-4 white-background">
-      <h1 class="text-center" style="padding-top:40px;font-family: tua; font-size:8em">XIAO SHEN</h1>
-    </div>
-    <div class="col-xs-4 " >
-      <div class="score" style="background: red; color: white; border-radius: 25px">
-        <p class="text-center number-style" style="font-size:8em;
-  font-family: figa;">
-            <%= 30-(Date.today - Date.civil(2014, 7, 6)).to_i %>
-        </h1>
-      </div>
-    </div>
-    <div class="col-xs-4 white-background">
-
-      <h1 class="text-center" style="padding-top:40px;font-family: tua; font-size:8em">
-        <!-- <i class="fa fa-chevron-left"></i> -->
-        HENRY LIU
-        <!-- <i class="fa fa-chevron-right"></i></h1> -->
-    </div>
-  </div>
-
-
-
-  <div class="row black-background">
-    <div class="col-xs-4 white-background" style="padding-bottom:50px">
-      <div class="row">
-        <div class="col-sm-6 col-sm-offset-3">
-
-          <button style="border:none; background: transparent;" data-toggle="modal" data-target="#myModal">
-                  <%= image_tag "http://res.cloudinary.com/dod2fovtd/image/upload/c_scale,h_350,w_330/v1404633883/shen_njtq1f.jpg", :style => "width: 100%; display:block; margin: 0 auto;" %>
-          </button>
-          <!-- Modal -->
-          <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-sm">
-              <div class="modal-content">
-                <%= image_tag "http://res.cloudinary.com/dod2fovtd/image/upload/v1404629575/xiao_urvva0.jpg", :style=>"width:100%" %>
-
-                <%= form_for @status do |f| %>
-                  <%= f.hidden_field :user, :value => "xiao" %>
-                  <%= f.hidden_field :success, :value => true %>
-                  <%= f.text_area :message,:class=>"flat-textarea", :value => "Record another successful day here..." %>
-                  <%= f.submit "成功！COO", :class=>"btn btn-success btn-block btn-lg"  %>
-                <% end %>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-<!-- Button trigger modal -->
-
-
-
-    <div class="col-xs-4"></div>
-    <div class="col-xs-4 white-background" style="padding-bottom:50px">
-      <div class="row">
-        <div class="col-sm-6 col-sm-offset-3">
-
-          <button style="border:none; background: transparent;" data-toggle="modal" data-target="#hModal">
-                  <%= image_tag "http://res.cloudinary.com/dod2fovtd/image/upload/c_scale,h_350,w_330/v1404633389/liu_geyejk.jpg", :style => "width: 100%; display:block; margin: 0 auto;" %>
-          </button>
-          <!-- Modal -->
-          <div class="modal fade" id="hModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-sm">
-              <div class="modal-content">
-                <%= image_tag "http://res.cloudinary.com/dod2fovtd/image/upload/v1404629575/henry_ydt0my.jpg", :width => "100%" %>
-                <%= form_for @status do |f| %>
-                  <%= f.hidden_field :user, :value => "henry" %>
-                  <%= f.hidden_field :success, :value => true %>
-                  <%= f.text_area :message, :class=>"flat-textarea", :value => "Record another successful day here..." %>
-                  <%= f.submit "成功！CPO", :class=>"btn btn-success btn-block btn-lg"  %>
-                <% end %>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
   <div class="row">
-    <div class="col-xs-4">
-      <table class="table table-striped">
-        <tbody>
-          <% @xiao_status.each do |status| %>
-            <tr>
-              <td>
-                <%= status.created_at.strftime("%Y-%m-%d") %>
-              </td>
-              <td>
-                <%= status.message %>
-              </td>
-            </tr>
-          <% end %>
-        </tbody>
-      </table>
+
+    <h1 class="text-center" style="font-family:qlassikbold; font-size: 5em; vertical-align:middle; color: #62A4CA;"> <i class="fa fa-check-square-o firstcharacter"></i><b>THE XXX DAY CHALLENGE</b></h1>
+    <div class="progress">
+      <% percentage = ((Date.today - Date.civil(2014, 7, 6)).to_i/30.0*100).to_i %>
+      <% progress_style = ("width:" + percentage.to_s + "%") %>
+  <div class="progress-bar progress-bar-striped active"  role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style= <%= progress_style %> >
+    <span class="sr-only"><%= percentage %> % Complete</span>
+  </div>
+</div>
+    <h2 class="text-center" style = "font-family: serious">
+      Only <b style="font-size: larger; color: #40C73C"><%= 30-(Date.today - Date.civil(2014, 7, 6)).to_i %> </b>days to go.
+    </h2>
+
+  </div>
+</div>
+
+<div class="container-fluid" style="background-color: #F7F7F7; padding-top:100px; padding-bottom:100px">
+  <div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+
+<div class="" id="create_item_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-body" style="padding-top:0">
+          <div class="row starter-pack-form-outer-row">
+            <div class="col-xs-12 starter-pack-inner">
+              <h3 class="text-center">
+                <i class="fa fa-pencil-square-o"></i>
+                DAILY CHECK-IN
+              </h3>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-12 starter-pack-form-body-outer" >
+              <div class="row starter-pack-form-body-inner">
+              <button class="btn btn-success circular-button button-check" style="display:block">
+                <i class="fa fa-check circular-check" style="font-size: 100px"></i>
+              </button>
+
+                  <%= form_for(@status, :html => { :class => "status_form", :style => 'display:none; padding-top:10px;' })  do |f| %>
+
+                  <%= radio_button_tag(:user, "xiao") %>
+                  <span class="label label-primary radio-label-style">Xiao Shen</span>
+
+                  <%= radio_button_tag(:user, "henry") %>
+                  <span class="label label-primary radio-label-style">Henry Liu</span>
+
+                  <%= f.hidden_field :success, :value => true %>
+                  <%= f.text_area :message,:class=>"flat-textarea", :style=>"margin-top:20px", :value => "Record another successful day here..." %>
+                    <%= button_tag(type: 'submit', class: "btn btn-success circular-button", :style => "display:block") do %>
+                    <i class="fa fa-thumbs-up"style="font-size: 100px"></i>
+                  <% end %>
+
+                <% end %>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="col-xs-4 black-background footer-style">
-      <div class="p" style=" font-family: grux "></div>
-      No discipline seems pleasant at the time, but painful. Later on, however, it produces a harvest of righteousness and peace for those who have been trained by it.
-      - Hebrews 12:11
-    </div>
-    <div class="col-xs-4">
-            <table class="table table-striped">
-        <tbody>
-          <% @henry_status.each do |status| %>
-            <tr>
-              <td>
-                <%= status.created_at.strftime("%Y-%m-%d") %>
-              </td>
-              <td>
-                <%= status.message %>
-              </td>
-            </tr>
-          <% end %>
-        </tbody>
-      </table>
     </div>
   </div>
   </div>
 </div>
+
+<div class="fluid-container" style="background-color: #62A4CA; padding-top:100px; padding-bottom:100px ">
+<div class="container">
+   <div class="h1 text-center" style="font-family: qlassikbold; color:white"><i class="fa fa-weixin" style="margin-right:5px"></i> Henry's Most Recent Message</div>
+  <div class="message-box1" style="margin: 20px auto; width: 423px; background-color: white; opacity: 0.8">
+        <div class="row" style="margin:10px; font-family:grux; font-size: 30px">
+          "
+          <%= @henry_status.last.message %>
+          "
+        </div>
+  </div>
+   <div class="h1 text-center" style="font-family: qlassikbold; color:white"><i class="fa fa-weixin" style="margin-right:5px"></i> Xiao's Most Recent Message</div>
+
+  <div class="message-box1" style="margin: 20px auto; width: 423px; background-color: white; opacity: 0.8">
+        <div class="row" style="margin:10px; font-family:grux; font-size: 30px">
+          "
+          <%= @xiao_status.last.message %>
+          "
+        </div>
+  </div>
+
+  <div class="h1 text-center" style="font-family: qlassikbold; color:white"><i class="fa fa-calendar" style="margin-right:5px"></i> Calendar of Fame</div>
+  <div class="row">
+
+    <% (Date.civil(2014, 7, 6)..Date.today).each_with_index do |date, index| %>
+
+<div class="modal fade" id= <%=index %> tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title" id="myModalLabel">Messages on <%= date.strftime("%B %d ") %>  </h4>
+      </div>
+      <div class="modal-body">
+        <% @xiao_status_unsorted.where(["created_at >= ? AND created_at <= ?", date.beginning_of_day, date.end_of_day]).each do |status| %>
+        <div class="row" style="margin:10px">
+          <span class="label label-primary radio-label-style">Xiao Shen</span>
+
+          <%= status.message %> <br>
+          </div>
+        <% end %>
+        <% @henry_status_unsorted.where(["created_at >= ? AND created_at <= ?", date.beginning_of_day, date.end_of_day]).each do |status| %>
+        <div class="row" style="margin:10px">
+          <span class="label label-primary radio-label-style">Henry Liu</span>
+          <%= status.message %> <br>
+        </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="col-xs-12 col-sm-6 col-md-4" style="margin-bottom: 30px">
+      <% target_name = "##{index}" %>
+      <div class="outer-structure" style="width:200px; height:200px; background-color: white;  border-radius: 5px" data-toggle="modal" data-target= <%= target_name %> >
+        <div class="row" style="background-color: red; margin: 0; border-top-left-radius:5px; border-top-right-radius:5px">
+          <div class="col-xs-12">
+            <h3 class="text-center" style="color:white"> <%= date.strftime("%B").upcase %> </h3>
+          </div>
+        </div>
+        <div class="row" style="margin: 0; border-bottom-left-radius:5px; border-bottom-right-radius:5px">
+          <div class="col-xs-12">
+            <h1 class="text-center" style="color:black; font-size: 80px; font-family:figa"> <%= date.day%>
+
+            </h1>
+          </div>
+        </div>
+      </div>
+    </div>
+    <% end %>
+  </div>
+  </div>
+</div>
+
+<div class="fluid-container">
+  <div class="container">
+    <div class="row">
+    <div class="col-xs-12 footer-style">
+      <i class="fa fa-book" style="font-size:100px"></i> <em style="font-family:figa; font-size: 40px">Hebrews 12:11</em> <br>
+      <b>No discipline seems pleasant at the time, but painful. Later on, however, it produces a harvest of righteousness and peace for those who have been trained by it.</b>
+
+    </div>
+    </div>
+  </div>
+</div>
+
+
+
+

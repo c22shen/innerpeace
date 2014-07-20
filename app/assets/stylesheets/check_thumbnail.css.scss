@@ -1,0 +1,67 @@
+.starter-pack-form-outer-row {
+  margin-top: 20px;
+  .starter-pack-inner {
+    background-color:#40BBC8;
+    color: white;
+    h3 {
+      color: white;
+      margin-bottom: 22px;
+      font-size: 30px;
+      font-weight: 100;
+    }
+  }
+}
+
+.starter-pack-form-body-outer {
+  background-color: #DAE0EF;
+  .starter-pack-form-body-inner {
+    background-color: #ECEFF8;
+    margin: 30px 20px 30px 20px;
+  }
+}
+
+
+.starter-pack-form-row {
+  padding:10px 15px;
+  .label-style {
+    color: #40BBC8;
+    margin-top: 8px;
+    font-size: 20px;
+  }
+  .field-style {
+    border: none;
+    border-radius: 3px;
+    height: 40px;
+    color: #40BBC8;
+    font-size: 20px;
+  }
+
+  .field-style-description {
+    border: none;
+    border-radius: 3px;
+    height: 80px;
+    color: #40BBC8;
+    font-size: 20px;
+  }
+}
+
+.starter-pack-form-row-image {
+  padding:0px 15px;
+  .label-style {
+    color: #40BBC8;
+    margin-top: 8px;
+    font-size: 20px;
+  }
+  .field-style {
+    border: none;
+    border-radius: 3px;
+    height: 40px;
+    color: #40BBC8;
+    margin-top:10px;
+
+  }
+}
+
+.starter-pack-form-row-submit {
+  margin:20px 0;
+}

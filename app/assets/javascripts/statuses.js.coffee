@@ -5,4 +5,7 @@
 $ ->
   $(".flat-textarea").click (e) ->
     $(this).val('')
-  $('.header').fadeIn(1000).delay(2000).slideUp(1000)
+
+  $(".button-check").click (e) ->
+    $('.status_form').slideDown()
+    $(this).slideUp()
