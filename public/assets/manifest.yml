@@ -1,13 +1,20 @@
 ---
 assets.png: assets-f3e07b42898d597fff8b786644b716ca.png
 rails.png: rails-7ad812856c7dc20006d43424bbe57d40.png
-application.js: application-1ba5891cd9f10fb72e474f500b31f6af.js
-application.css: application-84c69ab12cd7ff9c87b0259e5675611f.css
+application.js: application-38a8edaa36aa5b4fcf57c7dd1a7506f2.js
+application.css: application-0d2118e1c9736d548159ebc084b98c2f.css
 figa.ttf: figa-7b8c681e45094d15a104e5639cccd4f6.ttf
 grux.eot: grux-07adcf8f002c691fda32620c5a4e6208.eot
 grux.svg: grux-cf0cffdaf5d9dd9ee740c9260540a519.svg
 grux.ttf: grux-b28ccaba2b0e03dd0d54fde96f944740.ttf
 grux.woff: grux-334ac97f8335d88e589ceee956fae301.woff
+qlassik.otf: qlassik-cbd275db6979d235fe8a95deba6f3eb7.otf
+qlassik.ttf: qlassik-ea58e56b643d62abb410f73d199c23a8.ttf
+qlassikbold.otf: qlassikbold-ac51611a9774f183756614dc1c8f12ba.otf
+qlassikbold.ttf: qlassikbold-b6a8eb96d80a098350b2a30e6e4924a5.ttf
+serious.eot: serious-359dd3bcfd5e0eabdf5612e2a487a705.eot
+serious.ttf: serious-4dbfad210dded48917e698bbb6f8f3d3.ttf
+serious.woff: serious-adbf50b5932b2e05fdbc5bc945dc7ef8.woff
 tua.ttf: tua-cc175ae502392ac1587092d52d7f8592.ttf
 wg_sequence_font.ttf: wg_sequence_font-df227c4f7b37fd91676038bd363412bf.ttf
 cloudinary_cors.html: cloudinary_cors-cdb0a81d5ecbace9516f41c2b7579249.html
