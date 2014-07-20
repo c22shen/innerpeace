@@ -3,9 +3,6 @@
 # You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/
 
 $ ->
-  $(".flat-textarea").click (e) ->
-    $(this).val('')
-
   $(".button-check").click (e) ->
     $('.status_form').slideDown()
     $(this).slideUp()
